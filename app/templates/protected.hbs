@@ -1,0 +1,16 @@
+
+<h3>Protected route</h3>
+
+<p>
+  Only authenticated users can retrieve protected data.
+</p>
+
+<button {{action "createProtectedData"}}>Create protected data</button>
+
+<ul>
+  {{#each model as |item|}}
+    <li>Secret {{item.secret}}</li>
+  {{/each}}
+</ul>
+
+{{outlet}}
